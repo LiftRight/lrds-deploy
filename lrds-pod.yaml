@@ -1,0 +1,47 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: lrds-app
+  labels:
+      app: lrds
+spec:
+    containers:
+    - name: lrds-app
+      image: alexlauni/liftright-data-server:77eef84
+    containers:
+    - name: liftright-data-server
+      image: alexlauni/liftright-data-server:latest
+      env:
+      - name: MONGO_DATABASE_CONN
+        valueFrom:
+          secretKeyRef:
+            name: lrds-db-conn
+            key: mongo
+      - name: RUST_LOG
+        value: liftright_data_server=debug,warp=debug
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: lrds-service
+spec:
+    selector:
+        app: lrds
+    ports:
+    - port: 3030
+---
+kind: Ingress
+apiVersion: networking.k8s.io/v1beta1
+metadata:
+    name: lrds-ingress
+spec:
+    rules:
+    - http:
+        paths:
+        - path: /
+          backend:
+              serviceName: lrds-service
+              servicePort: 3030
+---
+            
+

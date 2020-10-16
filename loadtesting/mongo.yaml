@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mongodb-standalone
+spec:
+  serviceName: database
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database
+  template:
+    metadata:
+      labels:
+        app: database
+        selector: mongodb-standalone
+    spec:
+      containers:
+      - name: mongodb-standalone
+        image: mongo
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: mongodb-init-json
+          mountPath: /docker-entrypoint-initdb.data
+        - name: mongodb-init-sh
+          mountPath: /docker-entrypoint-initdb.d
+      volumes:
+      - name: mongodb-init-json
+        configMap:
+          name: mongodb-init-json
+      - name: mongodb-init-sh
+        configMap:
+          name: mongodb-init-sh
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: database
+  labels:
+    app: database
+spec:
+  clusterIP: None
+  selector:
+    app: database

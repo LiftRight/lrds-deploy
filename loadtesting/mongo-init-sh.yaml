@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  initdb.sh: |
+    mongoimport -d liftright-dev -c session_data --jsonArray --file=/docker-entrypoint-initdb.data/data.json
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-10-16T03:08:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:initdb.sh: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-10-16T03:08:54Z"
+  name: mongodb-init-sh
+  namespace: default
+  resourceVersion: "10292"
+  selfLink: /api/v1/namespaces/default/configmaps/mongodb-init-sh
+  uid: f32ea665-609b-44e3-881e-c1a6cdc71188

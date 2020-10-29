@@ -6,14 +6,11 @@ metadata:
       app: lrds
 spec:
     containers:
-    - name: lrds-app
-      image: alexlauni/liftright-data-server:77eef84
-    containers:
     - name: liftright-data-server
-      image: alexlauni/liftright-data-server:latest
+      image: localhost:5000/lrds:0b0b9ea
       env:
       - name: MONGO_DATABASE_CONN
-        value: mongodb://mongodb-standalone-0.database:27017/liftright-dev
+        value: mongodb://lrds:58LObjiMpxcjP1sMDW@mongodb-svc.default.svc.cluster.local/liftright-dev?replicaSet=mongodb&authMechanism=SCRAM-SHA-256
       - name: RUST_LOG
         value: liftright_data_server=debug,warp=debug
 ---

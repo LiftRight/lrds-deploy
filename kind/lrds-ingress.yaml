@@ -1,0 +1,16 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1beta1
+metadata:
+    name: lrds-ingress
+spec:
+    rules:
+    - host: staging.liftright.dirigim.lan
+      http:
+        paths:
+        - path: /
+          backend:
+              serviceName: lrds
+              servicePort: 3030
+---
+            
+

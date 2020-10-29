@@ -18,5 +18,5 @@ spec:
             image: gitopsbook/example-operator:v1.0
             command: [sh, -e, -c]
             args:
-            - git clone https://github.com/LiftRight/lrds-deploy.git /tmp/lrds-deploy
-              find /tmp/lrds-deploy/lrds -name '*.yaml' -exec kubectl apply -f {} \;
+            - git clone https://github.com/gitopsbook/sample-app-deployment.git /tmp/example
+              find /tmp/example -name '*.yaml' -exec kubectl apply -f {} \;

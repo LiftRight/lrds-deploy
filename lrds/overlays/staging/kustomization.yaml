@@ -4,5 +4,6 @@ namespace: staging
 resources:
   - ../../bases/backend
   - namespace.yaml
+  - sealed-mongo-conn-staging.yaml
 transformers:
   - labels.yaml

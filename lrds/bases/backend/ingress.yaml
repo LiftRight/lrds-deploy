@@ -10,5 +10,5 @@ spec:
     http:
       paths:
         - backend:
-          serviceName: lrds
-          servicePort: 80
+            serviceName: lrds
+            servicePort: 80

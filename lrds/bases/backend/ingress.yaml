@@ -9,7 +9,7 @@ spec:
   - host: k8staging.liftright.dirigim.us
     http:
       paths:
-          - path: /
+      - path: /
         backend:
           serviceName: lrds
           servicePort: 80

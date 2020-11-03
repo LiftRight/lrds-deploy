@@ -7,6 +7,6 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    targetPort: 3030
+    - targetPort: 3030
   selector:
     app: lrds

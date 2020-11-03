@@ -9,6 +9,5 @@ spec:
   ports:
     - port: 80
       targetPort: 3030
-      name: http
   selector:
     app: lrds

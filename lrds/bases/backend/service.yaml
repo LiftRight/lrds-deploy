@@ -7,6 +7,8 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - targetPort: 3030
+    - port: 80
+      nodePort: null
+      targetPort: 3030
   selector:
     app: lrds

@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: lrds-db-conn
+  namespace: production
+spec:
+  encryptedData:
+    mongo: AgAxO2YcPPwdSGi1b46gHJ+/FpGBIHQ15ZnjsLzAqLA0zpcEbpjgc3dNu56lPiNBS4DHBS76rzBN8BgutTcuFyXwm9cjibqEaVuF+9KZr+HzXB5uw87X+ElUyaBr0s/Wi8dG1QrYTz6S6XdZSbOy8TS13ueXZOtA1aKNrL9KoC7WahcRobbTH7UJ7G2MujPC+xBmS9RxjR53zN5MLLSUBIYP6btDTy25MUWyyQ83TCDlC0SVRIqgyaz9ZuGyRAWomDcsmpqbJnjvBmFXK6gi4qOHyKSaDERCDsvkHup8crvyZpydjmHsuU+RaWs8Y3YxKYVh1VEkXX97paSy790EKr9Y3zYrULNXyv8EFQPCuOUH0uT6BWKjPc2pqRYTqGEYefv9GfmsKFBfykssZHpz6GRZVjHHifnAHPUMB4e/g4kbkbhT3Ax8ErDFDhhkGdN4hulyt6n4OEFTL+sTfO7tAcbFdqclf2KYI8Lj8Tovzw0/gnPKn2JHUXOAjuXWXoRf0IND6tIdHag3IUbIltk2V5SL05M1LZcG2hBdlfQ2n5u0IBNzRbGnf35EoylRD9R+oBBQ7K5TCa1XJhBAYlgMY+TH14rgjUTOeUF2fbEKmiE/1IwAXda3QhtXUCiNH2ketuaPUhizQEtEDJ8fQGxXwqQmQg+HUHB+OkllO+jUunZrOSX9Hw53Wd3pepoGrc7/1BvNsqkZbYeJgjoKGpTC0WL3P6rItY5i79zL5CyOmRc6gXEohz/4bYvBPObjyV6eDx3jr1WeDZOC+4IrsmYSSQsxAY6/9YTeqIPf/NGIGxgsCD/cxBr3zk2baQ==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: lrds-db-conn
+      namespace: production
+

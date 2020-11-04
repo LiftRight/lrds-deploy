@@ -4,5 +4,9 @@ namespace: production
 resources:
   - ../../bases/backend
   - namespace.yaml
+  - mongo-conn-sealed.yaml
 transformers:
   - labels.yaml
+patchesStrategicMerge:
+  - gateway-patch.yaml
+  - virtualservice-patch.yaml

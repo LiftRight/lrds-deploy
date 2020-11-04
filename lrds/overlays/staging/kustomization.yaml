@@ -7,3 +7,6 @@ resources:
   - mongo-conn-sealed.yaml
 transformers:
   - labels.yaml
+patchesStrategicMerge:
+  - gateway-patch.yaml
+  - virtualservice-patch.yaml

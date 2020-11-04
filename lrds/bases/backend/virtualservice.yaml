@@ -3,8 +3,6 @@ kind: VirtualService
 metadata:
   name: lrds
 spec:
-  hosts:
-  - "staging.liftright.dirigim.us"
   gateways:
   - lrds-gateway
   http:

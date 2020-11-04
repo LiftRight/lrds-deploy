@@ -13,3 +13,14 @@ spec:
       protocol: HTTP
     hosts:
     - "REPLACE_HOST"
+    tls:
+      httpsRedirect: true
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    hosts:
+    - "REPLACE_HOST"
+    tls:
+      mode: SIMPLE
+      credentialName: "REPLACE_SECRET"

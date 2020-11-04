@@ -51,6 +51,6 @@ spec:
                   name: lrds-db-conn
                   key: mongo
             - name: RUST_LOG
-              value: "liftright_data_server=debug;warp=debug"
+              value: "DEBUG"
           ports:
             - containerPort: 3030

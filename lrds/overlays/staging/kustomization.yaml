@@ -4,6 +4,7 @@ namespace: staging
 resources:
   - ../../bases/backend
   - namespace.yaml
+  - certificate.yaml
   - mongo-conn-sealed.yaml
 transformers:
   - labels.yaml

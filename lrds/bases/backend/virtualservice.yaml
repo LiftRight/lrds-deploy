@@ -3,6 +3,8 @@ kind: VirtualService
 metadata:
   name: lrds
 spec:
+  hosts:
+  - "REPLACE_HOST"
   gateways:
   - lrds-gateway
   http:

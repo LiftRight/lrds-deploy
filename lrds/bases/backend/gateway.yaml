@@ -8,6 +8,14 @@ spec:
     istio: ingressgateway
   servers:
   - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "REPLACE_HOST"
+    tls:
+      httpsRedirect: false
+  - port:
       number: 443
       name: https
       protocol: HTTPS

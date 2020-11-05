@@ -8,6 +8,14 @@ spec:
     istio: ingressgateway
   servers:
   - port:
+      number: 80
+      name: http
+      protocol: HTTPS
+    hosts:
+    - "staging.liftright.dirigim.us"
+    tls:
+      redirectHttps: false
+  - port:
       number: 443
       name: https
       protocol: HTTPS

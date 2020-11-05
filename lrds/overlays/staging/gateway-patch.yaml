@@ -14,7 +14,7 @@ spec:
     hosts:
     - "staging.liftright.dirigim.us"
     tls:
-      httpRedirect: false
+      httpsRedirect: false
   - port:
       number: 443
       name: https

@@ -18,3 +18,9 @@ spec:
       mode: SIMPLE
       privateKey: sds
       serverCertificate: sds
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "REPLACE_HOST"

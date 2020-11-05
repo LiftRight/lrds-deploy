@@ -12,9 +12,15 @@ spec:
       name: https
       protocol: HTTPS
     hosts:
-    - "staging.liftright.dirigim.us"
+    - "dirigim.us"
     tls:
       credentialName: acme-web-liftright-secret
       mode: SIMPLE
       privateKey: sds
       serverCertificate: sds
+  - port:
+     number: 80
+     name: http
+     protocol: HTTP
+  hosts:
+  - "staging.liftright.dirigim.us"

@@ -10,6 +10,6 @@ spec:
   - port:
       number: 80
       name: http
-      protocol: HTTPS
+      protocol: HTTP
     hosts:
     - "staging.liftright.dirigim.us"

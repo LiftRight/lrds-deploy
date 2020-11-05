@@ -10,3 +10,4 @@ transformers:
 patchesStrategicMerge:
   - gateway-patch.yaml
   - virtualservice-patch.yaml
+  - certificate-patch.yaml

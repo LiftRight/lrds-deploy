@@ -6,4 +6,3 @@ resources:
   - hpa.yaml
   - gateway.yaml
   - virtualservice.yaml
-  - certificate.yaml

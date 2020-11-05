@@ -8,8 +8,13 @@ spec:
     istio: ingressgateway
   servers:
   - port:
-      number: 80
-      name: http
-      protocol: HTTP
+      number: 443
+      name: https
+      protocol: HTTPS
     hosts:
     - "REPLACE_HOST"
+    tls:
+      credentialName: acme-web-liftrght-secret
+      mode: SIMPLE
+      privateKey: sds
+      serverCertificate: sds

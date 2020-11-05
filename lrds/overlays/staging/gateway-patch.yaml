@@ -13,6 +13,9 @@ spec:
       protocol: HTTPS
     hosts:
     - "dirigim.us"
+    - "*.dirigim.us"
+    - "liftright.dirigim.us"
+    - "*.liftright.dirigim.us"
     tls:
       credentialName: acme-web-liftright-secret
       mode: SIMPLE

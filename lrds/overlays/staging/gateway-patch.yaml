@@ -19,8 +19,8 @@ spec:
       privateKey: sds
       serverCertificate: sds
   - port:
-     number: 80
-     name: http
-     protocol: HTTP
-  hosts:
-  - "staging.liftright.dirigim.us"
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "staging.liftright.dirigim.us"

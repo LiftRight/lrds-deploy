@@ -13,14 +13,3 @@ spec:
       protocol: HTTPS
     hosts:
     - "staging.liftright.dirigim.us"
-    tls:
-      httpsRedirect: false
-  - port:
-      number: 443
-      name: https
-      protocol: HTTPS
-    tls:
-      mode: SIMPLE
-      credentialName: liftright-tls
-    hosts:
-    - "staging.liftright.dirigim.us"

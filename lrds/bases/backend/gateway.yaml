@@ -14,7 +14,7 @@ spec:
     hosts:
     - "REPLACE_HOST"
     tls:
-      credentialName: acme-web-liftrght-secret
+      credentialName: acme-web-liftright-secret
       mode: SIMPLE
   - port:
       number: 80

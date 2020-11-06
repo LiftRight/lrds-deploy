@@ -8,6 +8,15 @@ spec:
     istio: ingressgateway
   servers:
   - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    hosts:
+    - "production.liftright.dirigim.us"
+    tls:
+      credentialName: acme-web-liftright-secret
+      mode: SIMPLE
+  - port:
       number: 80
       name: http
       protocol: HTTP

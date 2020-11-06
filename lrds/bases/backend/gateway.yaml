@@ -16,8 +16,6 @@ spec:
     tls:
       credentialName: acme-web-liftrght-secret
       mode: SIMPLE
-      privateKey: sds
-      serverCertificate: sds
   - port:
       number: 80
       name: http

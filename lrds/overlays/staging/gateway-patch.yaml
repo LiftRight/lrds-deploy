@@ -22,3 +22,5 @@ spec:
       protocol: HTTP
     hosts:
     - "staging.liftright.dirigim.us"
+    tls:
+      httpsRedirect: true

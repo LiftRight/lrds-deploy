@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: lrds
-          image: alexlauni/liftright-data-server:a6f3561
+          image: alexlauni/liftright-data-server:191f73b
           imagePullPolicy: IfNotPresent
           readinessProbe:
             initialDelaySeconds: 5

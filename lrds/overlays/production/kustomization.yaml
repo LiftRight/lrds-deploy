@@ -1,12 +1,22 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: production
-resources:
+
+bases:
   - ../../bases/backend
+
+resources:
   - namespace.yaml
   - mongo-conn-sealed.yaml
+
 transformers:
   - labels.yaml
+
 patchesStrategicMerge:
   - gateway-patch.yaml
   - virtualservice-patch.yaml
+
+images:
+  - name: lamalex/liftright-data-server
+    newName: lamalex/liftright-data-server
+    newTag: a6f3561

@@ -17,6 +17,6 @@ patchesStrategicMerge:
   - virtualservice-patch.yaml
 
 images:
-  - name: lamalex/liftright-data-server
-    newName: lamalex/liftright-data-server
+  - name: alexlauni/liftright-data-server
+    newName: alexlauni/liftright-data-server
     newTag: a6f3561

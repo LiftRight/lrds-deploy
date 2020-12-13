@@ -1,22 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: production
-
-bases:
-  - ../../bases/backend
-
 resources:
-  - namespace.yaml
-  - mongo-conn-sealed.yaml
-
+- ../../bases/backend
+- namespace.yaml
+- mongo-conn-sealed.yaml
 transformers:
-  - labels.yaml
-
+- labels.yaml
 patchesStrategicMerge:
-  - gateway-patch.yaml
-  - virtualservice-patch.yaml
-
+- gateway-patch.yaml
+- virtualservice-patch.yaml
 images:
-  - name: alexlauni/liftright-data-server
-    newName: alexlauni/liftright-data-server
-    newTag: 59e230b
+- name: alexlauni/liftright-data-server
+  newName: alexlauni/liftright-data-server
+  newTag: c322ec5

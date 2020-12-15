@@ -13,4 +13,4 @@ patchesStrategicMerge:
 images:
 - name: alexlauni/liftright-data-server
   newName: alexlauni/liftright-data-server
-  newTag: 0467a68
+  newTag: "7574100"
